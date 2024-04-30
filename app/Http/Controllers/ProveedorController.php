@@ -26,5 +26,8 @@ class ProveedorController extends Controller
         $nvoProveedor->fechaRegistro = $request->fechaRegistro;
         $nvoProveedor->telefono = $request->telefono;
         $nvoProveedor->correo = $request->correo;
+        $nvoProveedor->save();
+
+        return redirect('/proveedores/mostrar');
     }
 }
